@@ -1,7 +1,6 @@
 package alessia.entities;
 
 import javax.persistence.Entity;
-import javax.persistence.NamedQuery;
 
 @Entity
 public class Libro extends ElementoLetterario{

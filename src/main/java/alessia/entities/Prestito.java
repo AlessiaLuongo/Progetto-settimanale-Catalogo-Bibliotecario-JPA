@@ -103,4 +103,6 @@ public class Prestito {
                 ", dataRestituzioneEffettiva=" + dataRestituzioneEffettiva +
                 '}';
     }
+
+
 }

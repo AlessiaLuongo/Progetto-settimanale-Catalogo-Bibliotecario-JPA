@@ -52,7 +52,6 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
 
 
 
-
     // AGGIUNTA DI UN ELEMENTO AL CATALOGO
 
 /*      elementoLetterarioDAO.save(libro1);
@@ -100,5 +99,14 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
     // RICERCA PER TITOLO O PARTE DI ESSO
 
     //    System.out.println("Ecco i risultati che ho trovato: " + elementoLetterarioDAO.ricercaPerTitoloOparteDiEsso("Harry"));
+
+
+    // RESTITUZIONE DI UN PRESTITO
+
+    // prestitoDAO. updateDataRestituzione(prestito1, LocalDate.of(2024, 1,24));
+
+
+
+
     }
 }

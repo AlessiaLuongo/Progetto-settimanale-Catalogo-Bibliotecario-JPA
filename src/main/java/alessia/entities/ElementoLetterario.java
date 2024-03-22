@@ -1,9 +1,7 @@
 package alessia.entities;
 
-import jdk.jfr.Name;
-
 import javax.persistence.*;
-import java.time.LocalDate;
+
 
 @Entity
 @Inheritance(strategy = InheritanceType.JOINED)
