@@ -70,5 +70,10 @@ public class ElementoLetterarioDAO {
         return query.getResultList();
     }
 
+    public List<ElementoLetterario> ricercaPerTitoloOparteDiEsso(String titolo) {
+        TypedQuery<ElementoLetterario> query = em.createNamedQuery("ricercaPerTitoloOparteDiEsso", ElementoLetterario.class);
+        query.setParameter("titolo", titolo);
+        return query.getResultList();
+    }
 
 }

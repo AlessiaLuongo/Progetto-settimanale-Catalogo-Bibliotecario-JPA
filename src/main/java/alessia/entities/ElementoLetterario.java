@@ -1,5 +1,7 @@
 package alessia.entities;
 
+import jdk.jfr.Name;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -9,6 +11,7 @@ import java.time.LocalDate;
 @NamedQuery(name="ricercaPerIsbn", query = "SELECT e FROM ElementoLetterario e WHERE e.codiceIsbn = :codiceIsbn")
 @NamedQuery(name="ricercaPerAnnoDiPubblicazione", query = "SELECT e FROM ElementoLetterario e WHERE e.annoDiPubblicazione = :annoDiPubblicazione")
 @NamedQuery(name = "ricercaPerAutore", query = "SELECT libro FROM Libro libro WHERE libro.autore = :autore")
+@NamedQuery(name="ricercaPerTitoloOparteDiEsso", query = "SELECT elemento FROM ElementoLetterario elemento WHERE elemento.titolo LIKE CONCAT('%', :titolo, '%')")
 public abstract class ElementoLetterario {
     @Id
     private int codiceIsbn;

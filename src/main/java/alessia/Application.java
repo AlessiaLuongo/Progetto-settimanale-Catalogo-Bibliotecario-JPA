@@ -97,5 +97,8 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
     //    System.out.println("Ecco i libri dell'autore che cercavi: " + elementoLetterarioDAO.ricercaPerAutore("Alessia Luongo"));
 
 
+    // RICERCA PER TITOLO O PARTE DI ESSO
+
+    //    System.out.println("Ecco i risultati che ho trovato: " + elementoLetterarioDAO.ricercaPerTitoloOparteDiEsso("Harry"));
     }
 }
