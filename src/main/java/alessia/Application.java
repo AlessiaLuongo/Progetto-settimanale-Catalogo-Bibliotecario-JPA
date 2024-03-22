@@ -33,7 +33,7 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
         Rivista rivista3 = new Rivista(547, "Intrattenimento dal parrucchiera", 1963, 42, Periodicita.SETTIMANALE);
         Rivista rivista4 = new Rivista(147, "Com'è fatto il corpo umano", 1998, 47, Periodicita.SEMESTRALE);
 
-        //AGGIUNTA DI UN ELEMENTO AL CATALOGO
+    // AGGIUNTA DI UN ELEMENTO AL CATALOGO
 
 /*      elementoLetterarioDAO.save(libro1);
         elementoLetterarioDAO.save(libro2);
@@ -49,6 +49,10 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
         elementoLetterarioDAO.save(rivista4);
 */
 
-        
+
+    // RICERCA E RIMOZIONE DI UN ELEMENTO LETTERARIO ATTRAVERSO IL SUO CODICE ISBN
+
+
+        elementoLetterarioDAO.findByIsbnAndDelete(4567);
     }
 }

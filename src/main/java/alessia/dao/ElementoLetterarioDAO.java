@@ -25,4 +25,26 @@ public class ElementoLetterarioDAO {
             System.out.println(e.getMessage());
         }
     }
+    public ElementoLetterario findByIsbn(int codiceIsbn) {
+        return em.find(ElementoLetterario.class, codiceIsbn);
+    }
+
+
+    public void findByIsbnAndDelete(int codiceIsbn) {
+        try {
+            EntityTransaction t = em.getTransaction();
+            ElementoLetterario found = em.find(ElementoLetterario.class, codiceIsbn);
+            if (found != null) {
+                t.begin();
+                em.remove(found);
+                t.commit();
+                System.out.println("Elemento letterario " + ElementoLetterario.class.getName() + "eliminato");
+            } else System.out.println("Elemento letterario non trovato");
+
+
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
 }
