@@ -10,7 +10,7 @@ public abstract class ElementoLetterario {
     @Id
     private int codiceIsbn;
     private String titolo;
-    private LocalDate annoDiPubblicazione;
+    private int annoDiPubblicazione;
     private int numeroDiPagine;
 
 @OneToOne(mappedBy = "elementoPrestato")
@@ -21,7 +21,7 @@ private Prestito prestito;
     public ElementoLetterario(int codiceIsbn, String titolo, int annoDiPubblicazione, int numeroDiPagine) {
         this.codiceIsbn = codiceIsbn;
         this.titolo = titolo;
-        this.annoDiPubblicazione = getAnnoDiPubblicazione();
+        this.annoDiPubblicazione = annoDiPubblicazione;
         this.numeroDiPagine = numeroDiPagine;
     }
 
@@ -48,12 +48,12 @@ private Prestito prestito;
         this.titolo = titolo;
     }
 
-    public LocalDate getAnnoDiPubblicazione() {
+    public int getAnnoDiPubblicazione() {
         return annoDiPubblicazione;
     }
 
     public void setAnnoDiPubblicazione(int annoDiPubblicazione) {
-        this.annoDiPubblicazione = LocalDate.now();
+        this.annoDiPubblicazione = annoDiPubblicazione;
     }
 
     public int getNumeroDiPagine() {

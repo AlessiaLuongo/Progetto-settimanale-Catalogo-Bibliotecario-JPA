@@ -27,12 +27,21 @@ public class Prestito {
 
     public Prestito(){};
 
-    public Prestito(Utente utente, ElementoLetterario elementoPrestato, LocalDate dataInizio, LocalDate dataRestituzione, LocalDate dataRestituzioneEffettiva) {
+    public Prestito(Utente utente, ElementoLetterario elementoPrestato, LocalDate dataInizio) {
         this.utente = utente;
         this.elementoPrestato = elementoPrestato;
-        this.dataInizio = getDataInizio();
-        this.dataRestituzionePrevista = getDataRestituzionePrevista();
-        this.dataRestituzioneEffettiva = getDataRestituzioneEffettiva();
+        this.dataInizio = dataInizio;
+        this.dataRestituzionePrevista = dataInizio.plusDays(30);
+        this.dataRestituzioneEffettiva = null;
+    }
+
+    public Prestito(int id, Utente utente, ElementoLetterario elementoPrestato, LocalDate dataInizio, LocalDate dataRestituzionePrevista, LocalDate dataRestituzioneEffettiva) {
+        this.id = id;
+        this.utente = utente;
+        this.elementoPrestato = elementoPrestato;
+        this.dataInizio = dataInizio;
+        this.dataRestituzionePrevista = dataRestituzionePrevista;
+        this.dataRestituzioneEffettiva = dataRestituzioneEffettiva;
     }
 
     // GETTERS & SETTERS
@@ -66,7 +75,7 @@ public class Prestito {
         return dataRestituzionePrevista;
     }
 
-    public void etDataRestituzionePrevista(LocalDate getDataRestituzionePrevista) {
+    public void setDataRestituzionePrevista(LocalDate getDataRestituzionePrevista) {
         this.dataRestituzionePrevista = getDataInizio().plusDays(30);
     }
 

@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e9534bc7-a703-4097-b964-2ece761a6ba9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/dao/ElementoLetterarioDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/dao/PrestitoDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/dao/UtenteDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/ElementoLetterario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Periodicita.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Prestito.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Rivista.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Utente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessia/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessia/entities/ElementoLetterario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/ElementoLetterario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/alessia/entities/Prestito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Prestito.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
