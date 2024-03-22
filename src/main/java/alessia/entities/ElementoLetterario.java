@@ -7,6 +7,8 @@ import java.time.LocalDate;
 @Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "tipo_di_elemento_letterario")
 @NamedQuery(name="ricercaPerIsbn", query = "SELECT e FROM ElementoLetterario e WHERE e.codiceIsbn = :codiceIsbn")
+@NamedQuery(name="ricercaPerAnnoDiPubblicazione", query = "SELECT e FROM ElementoLetterario e WHERE e.annoDiPubblicazione = :annoDiPubblicazione")
+@NamedQuery(name = "ricercaPerAutore", query = "SELECT libro FROM Libro libro WHERE libro.autore = :autore")
 public abstract class ElementoLetterario {
     @Id
     private int codiceIsbn;

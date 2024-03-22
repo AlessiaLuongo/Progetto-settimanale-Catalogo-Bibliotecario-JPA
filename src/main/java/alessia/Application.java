@@ -81,13 +81,20 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
 
     // RICERCA E RIMOZIONE DI UN ELEMENTO LETTERARIO ATTRAVERSO IL SUO CODICE ISBN
 
-
-    //   elementoLetterarioDAO.findByIsbnAndDelete(4567);
+    //       elementoLetterarioDAO.findByIsbnAndDelete(4567);
 
 
     // RICERCA DI UN ELEMENTO CON QUERY
 
-    //    System.out.println("Ecco l'elemento che cercavi: " + elementoLetterarioDAO.findElementoPerIsbn(147));
+    //      System.out.println("Ecco l'elemento che cercavi: " + elementoLetterarioDAO.findElementoPerIsbn(147));
+
+    // RICERCA DI ELEMENTI ATTRAVERSO L'ANNO DI PUBBLICAZIONE
+
+    //      System.out.println("Ecco gli elementi o l'elemento che cercavi: " + elementoLetterarioDAO.ricercaPerAnnoDiPubblicazione(2020));
+
+    // RICERCA PER AUTORE
+
+    //    System.out.println("Ecco i libri dell'autore che cercavi: " + elementoLetterarioDAO.ricercaPerAutore("Alessia Luongo"));
 
 
     }
