@@ -38,7 +38,7 @@ public class ElementoLetterarioDAO {
                 t.begin();
                 em.remove(found);
                 t.commit();
-                System.out.println("Elemento letterario " + ElementoLetterario.class.getName() + "eliminato");
+                System.out.println("Elemento letterario: " + found.getTitolo() + " eliminato");
             } else System.out.println("Elemento letterario non trovato");
 
 
@@ -46,5 +46,6 @@ public class ElementoLetterarioDAO {
             System.out.println(e.getMessage());
         }
     }
+
 
 }

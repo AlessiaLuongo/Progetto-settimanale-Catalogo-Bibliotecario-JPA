@@ -3,14 +3,12 @@ package alessia;
 import alessia.dao.ElementoLetterarioDAO;
 import alessia.dao.PrestitoDAO;
 import alessia.dao.UtenteDAO;
-import alessia.entities.ElementoLetterario;
-import alessia.entities.Libro;
-import alessia.entities.Periodicita;
-import alessia.entities.Rivista;
+import alessia.entities.*;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import java.time.LocalDate;
 
 public class Application {
 private static final EntityManagerFactory emf = Persistence.createEntityManagerFactory("dataBaseBibliotecario");
@@ -19,6 +17,16 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
         ElementoLetterarioDAO elementoLetterarioDAO = new ElementoLetterarioDAO(em);
         UtenteDAO utenteDAO = new UtenteDAO(em);
         PrestitoDAO prestitoDAO = new PrestitoDAO(em);
+
+        Utente utente1 = new Utente("Alessia", "Luongo", LocalDate.of(1995,2,3), 123456);
+        Utente utente2 = new Utente("Aurora", "Luongo", LocalDate.of(2000,12,9), 456789);
+        Utente utente3 = new Utente("Ursula", "Nacke", LocalDate.of(1961, 11, 9), 564895);
+
+/*      utenteDAO.save(utente1);
+        utenteDAO.save(utente2);
+        utenteDAO.save(utente3);
+*/
+
 
         Libro libro1 = new Libro(1234, "La Storia del Rock", 2008, 52, "Ezio Guaitamacchi", "musica");
         Libro libro2 = new Libro(4567, "Narnia", 1939, 505, "Clive Staples Lewis", "romanzo");
@@ -32,6 +40,17 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
         Rivista rivista2 = new Rivista(684, "Mille e una ricetta", 2015, 28, Periodicita.SEMESTRALE);
         Rivista rivista3 = new Rivista(547, "Intrattenimento dal parrucchiera", 1963, 42, Periodicita.SETTIMANALE);
         Rivista rivista4 = new Rivista(147, "Com'è fatto il corpo umano", 1998, 47, Periodicita.SEMESTRALE);
+
+        Prestito prestito1 = new Prestito(utente1, libro1, LocalDate.of(2024, 1,24));
+        Prestito prestito2 = new Prestito(utente1, libro2, LocalDate.of(2020, 5,11));
+        Prestito prestito3 = new Prestito(utente2, libro6, LocalDate.of(2023, 2,10));
+        Prestito prestito4 = new Prestito(utente2, libro7, LocalDate.of(2024, 2,9));
+        Prestito prestito5 = new Prestito(utente3, libro8, LocalDate.of(2022, 10, 2));
+        Prestito prestito6 = new Prestito(utente3, rivista1, LocalDate.of(2021, 12,4));
+        Prestito prestito7 = new Prestito(utente3, rivista1, LocalDate.of(2023, 9,5));
+
+
+
 
     // AGGIUNTA DI UN ELEMENTO AL CATALOGO
 
@@ -47,12 +66,24 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
         elementoLetterarioDAO.save(rivista2);
         elementoLetterarioDAO.save(rivista3);
         elementoLetterarioDAO.save(rivista4);
-*/
+ */
 
+/*      prestitoDAO.save(prestito1);
+        prestitoDAO.save(prestito2);
+        prestitoDAO.save(prestito3);
+        prestitoDAO.save(prestito4);
+        prestitoDAO.save(prestito5);
+        prestitoDAO.save(prestito6);
+        prestitoDAO.save(prestito7);
+*/
+        // elementoLetterarioDAO.save(libro2);
 
     // RICERCA E RIMOZIONE DI UN ELEMENTO LETTERARIO ATTRAVERSO IL SUO CODICE ISBN
 
 
-        elementoLetterarioDAO.findByIsbnAndDelete(4567);
+      elementoLetterarioDAO.findByIsbnAndDelete(4567);
+
+
+
     }
 }

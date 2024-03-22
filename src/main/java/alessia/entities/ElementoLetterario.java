@@ -10,10 +10,12 @@ public abstract class ElementoLetterario {
     @Id
     private int codiceIsbn;
     private String titolo;
+    @JoinColumn(name = "anno_di_pubblicazione")
     private int annoDiPubblicazione;
+    @JoinColumn(name = "numero_di_pagine")
     private int numeroDiPagine;
 
-@OneToOne(mappedBy = "elementoPrestato")
+@OneToOne(mappedBy = "elementoPrestato", cascade = CascadeType.REMOVE)
 private Prestito prestito;
 
 // CONSTRUCTORS
@@ -69,6 +71,15 @@ private Prestito prestito;
         return prestito;
     }
 
+    @Override
+    public String toString() {
+        return "ElementoLetterario{" +
+                "codiceIsbn=" + codiceIsbn +
+                ", titolo='" + titolo + '\'' +
+                ", annoDiPubblicazione=" + annoDiPubblicazione +
+                ", numeroDiPagine=" + numeroDiPagine +
+                '}';
+    }
 }
 
 

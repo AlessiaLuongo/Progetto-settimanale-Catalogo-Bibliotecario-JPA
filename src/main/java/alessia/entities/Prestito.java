@@ -11,14 +11,17 @@ public class Prestito {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     @ManyToOne
-    @JoinColumn(name = "utente")
+    @JoinColumn(name = "utente_id")
 
     private Utente utente;
     @OneToOne
     @JoinColumn(name = "elemento_prestato")
     private ElementoLetterario elementoPrestato;
+    @JoinColumn(name = "data_inizio_prestito")
     private LocalDate dataInizio;
+    @JoinColumn(name = "data_restituzione_prestito")
     private LocalDate dataRestituzionePrevista;
+    @JoinColumn(name = "data_restituzione_prestito-effettiva")
     private LocalDate dataRestituzioneEffettiva;
 
 
@@ -93,7 +96,7 @@ public class Prestito {
     @Override
     public String toString() {
         return "Prestito{" +
-                "utente=" + utente +
+                "utente=" + utente.getNome() + utente.getCognome() +
                 ", elementiPrestati=" + elementoPrestato +
                 ", dataInizio=" + dataInizio +
                 ", dataRestituzione=" + dataRestituzionePrevista +
