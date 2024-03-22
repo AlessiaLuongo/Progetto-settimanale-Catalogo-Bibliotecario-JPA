@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/src/main/java/alessia/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/Application.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessia/dao/ElementoLetterarioDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/dao/ElementoLetterarioDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/alessia/entities/ElementoLetterario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/ElementoLetterario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/alessia/entities/Prestito.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/alessia/entities/Prestito.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

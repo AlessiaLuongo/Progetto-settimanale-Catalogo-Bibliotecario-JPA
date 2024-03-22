@@ -8,6 +8,7 @@ import alessia.entities.*;
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
+import javax.persistence.Query;
 import java.time.LocalDate;
 
 public class Application {
@@ -81,8 +82,12 @@ private static final EntityManagerFactory emf = Persistence.createEntityManagerF
     // RICERCA E RIMOZIONE DI UN ELEMENTO LETTERARIO ATTRAVERSO IL SUO CODICE ISBN
 
 
-      elementoLetterarioDAO.findByIsbnAndDelete(4567);
+    //   elementoLetterarioDAO.findByIsbnAndDelete(4567);
 
+
+    // RICERCA DI UN ELEMENTO CON QUERY
+
+    //    System.out.println("Ecco l'elemento che cercavi: " + elementoLetterarioDAO.findElementoPerIsbn(147));
 
 
     }

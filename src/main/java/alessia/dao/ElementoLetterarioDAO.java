@@ -4,6 +4,7 @@ import alessia.entities.ElementoLetterario;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityTransaction;
+import javax.persistence.TypedQuery;
 
 public class ElementoLetterarioDAO {
 
@@ -29,6 +30,12 @@ public class ElementoLetterarioDAO {
         return em.find(ElementoLetterario.class, codiceIsbn);
     }
 
+
+    public ElementoLetterario findElementoPerIsbn(int codiceIsbn){
+        TypedQuery<ElementoLetterario> query = em.createNamedQuery("ricercaPerIsbn", ElementoLetterario.class);
+        query.setParameter("codiceIsbn", codiceIsbn);
+        return query.getSingleResult();
+    }
 
     public void findByIsbnAndDelete(int codiceIsbn) {
         try {
